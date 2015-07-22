@@ -1,18 +1,16 @@
 'use strict';
-module.exports = function (arr) {
-	if (!Array.isArray(arr)) {
-		throw new TypeError('Expected an array to multiply its items');
-	}
+module.exports = function(arr) {
+	var product = 1;
 
-	if (arr.length < 2) {
+	arr = Array.isArray(arr) ? arr : arguments;
+
+	if (arr.length >= 2) {
+		for (var i = 0; i < arr.length; i++) {
+			product *= arr[i];
+		}
+
+		return product;
+	} else {
 		throw new Error('The array should at least have 2 items');
 	}
-
-	var product = arr[0];
-
-	for (var i = 1; i < arr.length; i++) {
-		product = product * arr[i];
-	}
-
-	return product;
 };
