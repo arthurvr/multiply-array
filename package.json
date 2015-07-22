@@ -29,5 +29,8 @@
   ],
   "devDependencies": {
     "mocha": "*"
+  },
+  "dependencies": {
+    "get-numbers": "^1.0.0"
   }
 }

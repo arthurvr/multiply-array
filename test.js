@@ -27,3 +27,18 @@ it('should throw when not passing an array', function () {
 		multiplyArray({});
 	});
 });
+
+it('should work when array has non-numbers', function () {
+	assert.equal(multiplyArray([2, 2, 'bear', 4, 'food']), 16);
+	assert.equal(multiplyArray([2, 'eats', -2]), -4);
+});
+
+it('should throw when not passing an array with enough numbers', function () {
+	assert.throws(function () {
+		multiplyArray(['yo', 'yoyo']);
+	});
+
+	assert.throws(function () {
+		multiplyArray(['yo', 'yoyo', 3]);
+	});
+});
