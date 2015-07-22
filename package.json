@@ -1,0 +1,33 @@
+{
+  "name": "multiply-array",
+  "version": "0.0.0",
+  "description": "Multiply all items in an array",
+  "license": "MIT",
+  "repository": "arthurvr/multiply-array",
+  "author": {
+    "name": "Arthur Verschaeve",
+    "email": "contact@arthurverschaeve.be",
+    "url": "arthurverschaeve.be"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "product",
+    "multiply",
+    "factors",
+    "items",
+    "array",
+    "list",
+    "math"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
