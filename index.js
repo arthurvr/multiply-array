@@ -11,7 +11,7 @@ module.exports = function (arr) {
 	var product = arr[0];
 
 	for (var i = 1; i < arr.length; i++) {
-		product = product * arr[i];
+		product *= arr[i];
 	}
 
 	return product;
