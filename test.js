@@ -1,29 +1,35 @@
 'use strict';
-var assert = require('assert');
+var test = require('ava');
 var multiplyArray = require('./');
 
-it('should multiply all items in an array', function () {
-	assert.equal(multiplyArray([2, 2, 4]), 16);
-	assert.equal(multiplyArray([2, -2]), -4);
-	assert.equal(multiplyArray([2, 0, 10]), 0);
+test('should multiply all items in an array', function (t) {
+	t.is(multiplyArray([2, 2, 4]), 16);
+	t.is(multiplyArray([2, -2]), -4);
+	t.is(multiplyArray([2, 0, 10]), 0);
+
+	t.end();
 });
 
-it('should throw when there are not enough items', function () {
-	assert.throws(function () {
+test('should throw when there are not enough items', function (t) {
+	t.throws(function () {
 		multiplyArray([2]);
 	});
 
-	assert.throws(function () {
+	t.throws(function () {
 		multiplyArray([]);
 	});
+
+	t.end();
 });
 
-it('should throw when not passing an array', function () {
-	assert.throws(function () {
+test('should throw when not passing an array', function (t) {
+	t.throws(function () {
 		multiplyArray('yoyo');
 	});
 
-	assert.throws(function () {
+	t.throws(function () {
 		multiplyArray({});
 	});
+
+	t.end();
 });
